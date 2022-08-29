@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Italianno&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .overall_div {
+            display: grid;
+        }
+
+        .header_nav {
+            z-index: 28;
+            position: fixed;
+            top: 0%;
+            min-height: fit-content;
+            width: 100%;
+            padding: 0% 5% 0% 3%;
+            background: linear-gradient(180deg, #000000 -26.87%, rgba(0, 0, 0, 0) 119%);
+        }
+
+        .nav_div {
+            padding: 0.4%;
+        }
+
+        .ul_nav,
+        .ul_nav>div {
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+
+        .li_left {
+            width: 35%;
+            justify-content: space-evenly;
+        }
+
+        .li_middle {
+            width: 20%;
+            justify-content: center;
+        }
+
+        .li_right {
+            width: 35%;
+            justify-content: space-evenly;
+        }
+
+        #nav_all {
+            list-style-type: none;
+        }
+
+        .ul_nav>div>li>.a_welcome,
+        .a_menu,
+        .a_reservations,
+        .cuisine,
+        .a_about,
+        .a_contact_us,
+        .a_order_now {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .a_order_now {
+            text-decoration: none;
+            height: 40px;
+            padding: 2%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a_order_now:hover {
+            color: #141414;
+            background-color: #E49031;
+            font-weight: 600;
+        }
+
+        /* nav bar animation start (need explaination) */
+        .ul_nav>div>li>a:nth-of-type(1):hover {
+            text-decoration: none;
+            color: #E49031;
+            position: relative;
+        }
+
+        .ul_nav>div>li>a:nth-of-type(1):focus {
+            text-decoration: none;
+            color: #E49031;
+            position: relative;
+        }
+
+        .ul_nav>div>li>a:nth-of-type(1) {
+            position: relative;
+        }
+
+        .ul_nav>div>li>a:nth-of-type(1)::after {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 0.12rem;
+            background: #E49031;
+            bottom: -2px;
+            left: 5px;
+            transform: scale(0, 1);
+            transition: 0.3s ease;
+        }
+
+        .ul_nav>div>li>a:nth-of-type(1):hover::after {
+            transform: scale(1, 1.5);
+        }
+
+        .ul_nav>div>li>a:nth-of-type(1):focus::after {
+            transform: scale(1, 1.5);
+        }
+
+        /* nav bar animation end */
+        .cuisine {
+            font-family: 'Italianno';
+            font-size: 55px;
+            cursor: default;
+        }
+
+        .welcome,
+        .menu,
+        .reservations,
+        .about,
+        .contact_us,
+        .order_now {
+            font-family: 'Inter';
+            font-size: 17px;
+            letter-spacing: 0.3px;
+        }
+
+        .tog_with_nav_bar {
+            position: relative;
+            height: 625px;
+            width: 100%;
+        }
+
+        .main_div_1 {
+            position: absolute;
+            cursor: default;
+            border: 8px solid #FFFFFF;
+            width: 51.9%;
+            height: 250px;
+            left: 320px;
+            top: 190px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding-top: 4.8%;
+        }
+
+        .main_div_1>h1 {
+            font-family: 'Italianno';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 124px;
+            line-height: 80px;
+            color: #FFFFFF;
+        }
+
+        .main_div_1>p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 133%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .main_div_2 {
+            height: 3980px;
+            background: #0E0C0F;
+        }
+
+        .main_div_2_sub_1 {
+            position: relative;
+            padding-top: 100px;
+            display: flex;
+            height: fit-content;
+        }
+
+        .main_div_2_sub_1>img {
+            position: absolute;
+            width: 350px;
+            height: 670px;
+            left: -2px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .Table {
+            position: absolute;
+            left: 375px;
+            box-sizing: border-box;
+            width: 610px;
+            height: 830px;
+            background: #0E0C0F;
+            padding-bottom: 50px;
+            border: 8px solid #FFFFFF;
+            /* border-collapse: collapse; */
+        }
+
+        .Table>h2 {
+            font-family: 'Italianno';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 70px;
+            /* identical to box height, or 100% */
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 55px;
+            margin-bottom: 45px;
+        }
+
+        .Tbody {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        #column {
+            border-bottom: 2px solid #FFFFFF;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+
+        #main_span_1>span:last-child {
+            float: right;
+        }
+
+        #main_span_1 {
+            font-family: 'Italianno';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 38px;
+            /* identical to box height, or 100% */
+            color: #FFFFFF;
+        }
+
+        #main_span_2 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 32px;
+            /* identical to box height, or 133% */
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overall_div">
+        <img src="./photos/Menu/image 20.png" alt="Together with nav bar" class="tog_with_nav_bar">
+        <header>
+            <nav class="header_nav">
+                <div class="nav_div">
+                    <ul class="ul_nav">
+                        <div class="li_left">
+                            <li class="welcome" id="nav_all"><a class="a_welcome" href="#">Welcome</a></li>
+                            <li class="menu" id="nav_all"><a class="a_menu" href="#">Menu</a></li>
+                            <li class="reservations" id="nav_all"><a class="a_reservations" href="#">Reservations</a>
+                            </li>
+                        </div>
+                        <div class="li_middle">
+                            <li class="cuisine" id="nav_all">48&nbsp; Cuisine</li>
+                        </div>
+                        <div class="li_right">
+                            <li class="about" id="nav_all"><a class="a_about" href="#">About</a></li>
+                            <li class="contact_us" id="nav_all"><a class="a_contact_us" href="#">Contact Us</a></li>
+                            <a class="a_order_now" href="#">
+                                <li class="order_now" id="nav_all">Order Now</li>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main_div_1">
+                <h1>Main Menu</h1>
+                <p>We have Chinese food, Japanese food,<br /> and Korean food.
+                </p>
+            </div>
+            <div class="main_div_2">
+                <div class="main_div_2_sub_1">
+                    <img src="./photos/Menu/image 21.png" alt="1st Image After Main Menu">
+                    <div class="Table">
+                        <h2>Chinese Food</h2>
+                        <div class="Tbody">
+                            <div class="first_column" id="column">
+                                <span id="main_span_1"><span>Kung Pao Chicken</span>
+                                    <span>$ 15.00</span></span>
+                                <br />
+                                <span id="main_span_2">Chicken, dried chili, and cashews</span>
+                            </div>
+                            <div class="second_column" id="column">
+                                <span id="main_span_1">
+                                    <span>Wonton Sup</span> <span>$ 8.00</span>
+                                </span>
+                                <br />
+                                <span id="main_span_2">Stuffed dumplings with savory sauce</span>
+                            </div>
+                            <div class="third_column" id="column">
+                                <span id="main_span_1">
+                                    <spam>Peking Duck</spam> <span>$ 35.00</span>
+                                </span>
+                                <br />
+                                <span id="main_span_2">Peking duck roasted with special spices</span>
+                            </div>
+                            <div class="fourth_column" id="column">
+                                <span id="main_span_1">
+                                    <span>Hainan Rice</span> <span>$ 15.00</span>
+                                </span>
+                                <br />
+                                <span id="main_span_2">Hainan rice with grilled chicken</span>
+                            </div>
+                            <div class="fifth_column" id="column">
+                                <span id="main_span_1">
+                                    <span>Dimsum</span> <span>$ 8.00</span>
+                                </span>
+                                <br />
+                                <span id="main_span_2">Dim Sum Chicken, Shrimp and Mushrooms</span>
+                            </div>
+                            <div class="sixth_column" id="column">
+                                <span id="main_span_1">Angsio Tofu <span>$ 8.00</span></span>
+                                <br />
+                                <span id="main_span_2">Silken tofu cooked with oyster sauce and mushrooms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

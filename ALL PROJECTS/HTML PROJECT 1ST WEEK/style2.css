@@ -1,0 +1,139 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E4E4E4E5;
+    border: 25px solid white;
+    height: 39.05em;
+}
+
+/*Everything on the LHS section start*/
+.facebook_logo {
+    width: 22%;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+}
+.text_under_logo {
+    position: absolute;
+    top: 32%;
+    left: 12%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 180%;
+}
+/*Everything on the LHS section end*/
+
+/*Everything on the RHS section start*/
+fieldset {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 30%;
+    margin: 3% 12% 0% 58%;
+    background-color: white;
+    border-style: initial;
+    border-radius: 6px;
+    height: 21em;
+    box-shadow: 0px 1px 6px 1px #aaa;
+    padding: 1% 1% 1% 1%;
+}
+input {
+    display: block;
+    border-radius: 6px;
+    width: 100%;
+    height: 3.5em;
+    margin-bottom: 3%;
+    border: 1px rgb(228, 219, 219);
+    padding-left: 3%;
+    border-style: solid;
+    outline: none;
+}
+input::placeholder {
+    color: rgb(118, 118, 118);
+    font-size: 115%;
+}
+.log_in_button {
+    width: 100%;
+    background-color: #1977F3;
+    margin-top: 2%;
+    font-size: 120%;
+}
+.log_in_button > a:link {
+    text-decoration: none;
+    color: white;
+}
+.log_in_button > a:visited {
+    text-decoration: none;
+    color: white;
+}
+.log_in_button > a:hover {
+    text-decoration: none;
+}
+
+#all_button {
+    height: 2.6em;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.text_below_1st_button {
+    text-align: center;
+    color: #1977F3;;
+    font-weight: 500;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 80%;
+}
+#a_text_below_1st_button:link {
+    text-decoration: none;
+    color: #1977F3;;
+}
+#a_text_below_1st_button:visited {
+    text-decoration: none;
+    color: #1977F3;
+}
+#a_text_below_1st_button:hover {
+    text-decoration: none;
+}
+hr {
+    border: 1px solid;
+    border-color: rgb(214, 208, 208);
+}
+.new_acc_button {
+    background-color: rgb(39, 204, 39);
+    font-size: 105%;
+    width: 60%;
+}
+.a_new_acc_button:link {
+    text-decoration: none;
+}
+.a_new_acc_button:visited {
+    text-decoration: none;
+    color: white;
+}
+.a_new_acc_button:hover {
+    text-decoration: none;
+}
+.div_2nd_button {
+    text-align: center;
+    padding: 8% 0% 8% 0%;
+}
+.below_fieldset {
+    padding-left: 61%;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.a_below_fieldset:link {
+    text-decoration: none;
+    color: black;
+}
+.a_below_fieldset:visited {
+    text-decoration: none;
+    color: black;
+}
+.a_below_fieldset:hover {
+    text-decoration: none;
+}
+/*Everything on the RHS section end*/
